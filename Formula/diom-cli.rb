@@ -1,25 +1,25 @@
 class DiomCli < Formula
   desc "CLI for interacting with the Diom components platform"
   homepage "https://diom.com"
-  version "0.2.2"
+  version "0.2.3"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/svix/diom/releases/download/v0.2.2/diom-cli-aarch64-apple-darwin.tar.xz"
-      sha256 "8570b0e0e9ff22a95a6167e8c1d581f578f92d83f29aa2b7a42ff4d62722fdc9"
+      url "https://github.com/svix/diom/releases/download/v0.2.3/diom-cli-aarch64-apple-darwin.tar.xz"
+      sha256 "b05199acd80d7cf538c0f52e345b205e2c28519864a51ff1973e77ccf153ad08"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/svix/diom/releases/download/v0.2.2/diom-cli-x86_64-apple-darwin.tar.xz"
-      sha256 "bc740523161e540dc769f0886fcbca541429e94c69d0c04e26e17d751f802cb7"
+      url "https://github.com/svix/diom/releases/download/v0.2.3/diom-cli-x86_64-apple-darwin.tar.xz"
+      sha256 "29d3f5badb42c0ab8bbd8d8b16dd03361c197a528d95b1e425794261515c26ac"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/svix/diom/releases/download/v0.2.2/diom-cli-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "375750dfcc67ab62a646f50ce5557635af8d8bb94defa53239acf7a72808ad2e"
+      url "https://github.com/svix/diom/releases/download/v0.2.3/diom-cli-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "f56a33c53a7f3113f473485ef0101249b0a707d6393b9adec6dc4bf99f43a6f0"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/svix/diom/releases/download/v0.2.2/diom-cli-x86_64-unknown-linux-musl.tar.xz"
-      sha256 "ecc346bb6cbe92897d47f3c7b956eab94775e3d5de2e87ef4ae1b3e8f549a9a5"
+      url "https://github.com/svix/diom/releases/download/v0.2.3/diom-cli-x86_64-unknown-linux-musl.tar.xz"
+      sha256 "03ccfc8790643fa0876cfb933be6fe7a481ce75c763d3b7865bb78d2642d5d92"
     end
   end
   license "MIT"
