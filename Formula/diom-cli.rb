@@ -1,25 +1,25 @@
 class DiomCli < Formula
   desc "CLI for interacting with the Diom components platform"
   homepage "https://diom.com"
-  version "0.2.4"
+  version "0.2.5"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/svix/diom/releases/download/v0.2.4/diom-cli-aarch64-apple-darwin.tar.xz"
-      sha256 "a40f3475acb325083218a3a7b9083556d98ce397f132a42b94f3cd3be0971038"
+      url "https://github.com/svix/diom/releases/download/v0.2.5/diom-cli-aarch64-apple-darwin.tar.xz"
+      sha256 "0b7733b69ab196ae2385de575e52f06b9df146aa87828493430edd31af40e14e"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/svix/diom/releases/download/v0.2.4/diom-cli-x86_64-apple-darwin.tar.xz"
-      sha256 "ec109cb3f06d34e40eda2af0ac394fc8fac5672381723ffc7cda8c1ac92ffd47"
+      url "https://github.com/svix/diom/releases/download/v0.2.5/diom-cli-x86_64-apple-darwin.tar.xz"
+      sha256 "722ac2f6ef80055059db6bf1bbf603a6f4671d3a3d89e8fa7e108250c4c20203"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/svix/diom/releases/download/v0.2.4/diom-cli-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "08c412a353a6884915c820faa73af156ec3db308dd66f1f917675d1dd34a518e"
+      url "https://github.com/svix/diom/releases/download/v0.2.5/diom-cli-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "7665f5e3f1263b84b62b7aef974c9b5a63dbc0881e34c3a3908111c63423b871"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/svix/diom/releases/download/v0.2.4/diom-cli-x86_64-unknown-linux-musl.tar.xz"
-      sha256 "57d7ae7561818e09135ed45822613b23698ca6caa68aead51eb4cb5ca947a8dc"
+      url "https://github.com/svix/diom/releases/download/v0.2.5/diom-cli-x86_64-unknown-linux-musl.tar.xz"
+      sha256 "3a78dae44b75a67d3a2422a6534b9a5cde91863699eccf079d7aeecf4ae9e5b1"
     end
   end
   license "MIT"
@@ -50,10 +50,18 @@ class DiomCli < Formula
   end
 
   def install
-    bin.install "diom" if OS.mac? && Hardware::CPU.arm?
-    bin.install "diom" if OS.mac? && Hardware::CPU.intel?
-    bin.install "diom" if OS.linux? && Hardware::CPU.arm?
-    bin.install "diom" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "diom"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "diom"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "diom"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "diom"
+    end
 
     install_binary_aliases!
 
